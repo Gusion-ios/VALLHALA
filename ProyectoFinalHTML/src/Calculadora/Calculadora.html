@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de EPP - Descubre qué equipos necesita tu empresa - Safeguard Industrial">
+    <meta name="keywords" content="calculadora EPP, equipos protección personal, seguridad industrial, presupuesto">
+    <meta name="author" content="Safeguard Industrial">
+    <title>Calculadora de EPP - Safeguard Industrial</title>
+    <!-- CSS global del proyecto -->
+    <link rel="stylesheet" href="../CSS General.css">
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER — Barra de navegación (igual en todas las páginas)
+     ============================================================ -->
+<header class="header">
+    <div class="row-1">
+
+        <!-- LOGO -->
+        <div class="Logo">
+            <img src="Multimedia/Logo.png" alt="Safeguard Industrial">
+        </div>
+
+        <!-- MENÚ — Enlaces internos entre páginas -->
+        <div><h2><a href="Inicio.html">INICIO</a></h2></div>
+        <div><h2><a href="Catalogo.html">CATÁLOGO</a></h2></div>
+        <div><h2><a href="BlogGuias.html">BLOG</a></h2></div>
+        <div><h2><a href="Distribuidores.html">DISTRIBUIDORES</a></h2></div>
+        <div><h2><a href="Cotizacion.html">CONTACTO</a></h2></div>
+
+        <!-- BOTÓN PRINCIPAL -->
+        <div class="Boton-1-1">
+            <button class="btn-principal" onclick="location.href='Cotizacion.html'">
+                SOLICITAR ASESORÍA <br> TÉCNICA
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL
+     ============================================================ -->
+<div class="container-calc">
+
+    <!-- Título -->
+    <div class="titulo-calc">
+        <h2>CALCULADORA DE EPP</h2>
+        <p>Descubre qué equipos de protección necesita tu empresa según tu industria y número de trabajadores</p>
+    </div>
+
+
+    <!-- ============================================================
+         GRID: formulario izq | resultados der
+         ============================================================ -->
+    <div class="grid-calc">
+
+        <!-- COLUMNA IZQUIERDA — Formulario -->
+        <div class="col-form-calc">
+
+            <!-- Campo: Tipo de industria -->
+            <label for="industria">Tipo de industria</label>
+            <select id="industria" name="industria">
+                <option value="" disabled selected>Selecciona tu industria</option>
+                <option value="construccion">Construcción</option>
+                <option value="mineria">Minería</option>
+                <option value="quimica">Industria Química</option>
+                <option value="manufactura">Manufactura</option>
+                <option value="logistica">Logística y Almacén</option>
+            </select>
+
+            <!-- Campo: Número de trabajadores -->
+            <label for="trabajadores">Número de trabajadores</label>
+            <input
+                    type="number"
+                    id="trabajadores"
+                    name="trabajadores"
+                    placeholder="Ej: 50"
+                    min="1"
+                    max="5000">
+
+            <!-- Campo: Nivel de riesgo — pills -->
+            <label>Nivel de riesgo</label>
+            <div class="pills-riesgo">
+                <button class="pill" type="button">Bajo</button>
+                <button class="pill" type="button">Medio</button>
+                <button class="pill activo" type="button">Alto</button>
+            </div>
+
+            <!-- Campo: Frecuencia de renovación -->
+            <label for="frecuencia">Frecuencia de renovación</label>
+            <select id="frecuencia" name="frecuencia">
+                <option value="" disabled selected>Frecuencia</option>
+                <option value="mensual">Mensual</option>
+                <option value="trimestral">Trimestral</option>
+                <option value="semestral">Semestral</option>
+                <option value="anual">Anual</option>
+            </select>
+
+            <!-- Botón calcular — CTA -->
+            <button class="btn-calcular" type="button">CALCULAR EPP</button>
+
+        </div>
+
+
+        <!-- COLUMNA DERECHA — Tabla de resultados -->
+        <div class="col-resultado-calc">
+
+            <h3>EQUIPOS RECOMENDADOS</h3>
+
+            <!-- Tabla de resultados — contenido del sitio -->
+            <table class="tabla-calc">
+                <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>Cantidad</th>
+                    <th>Frecuencia</th>
+                    <th>Prioridad</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Casco de seguridad</td>
+                    <td>1 x trabajador</td>
+                    <td>Anual</td>
+                    <td><span class="badge-alta">Alta</span></td>
+                </tr>
+                <tr>
+                    <td>Guantes industriales</td>
+                    <td>2 pares x trabajador</td>
+                    <td>Mensual</td>
+                    <td><span class="badge-alta">Alta</span></td>
+                </tr>
+                <tr>
+                    <td>Gafas de protección</td>
+                    <td>1 x trabajador</td>
+                    <td>Semestral</td>
+                    <td><span class="badge-media">Media</span></td>
+                </tr>
+                <tr>
+                    <td>Calzado de seguridad</td>
+                    <td>1 par x trabajador</td>
+                    <td>Anual</td>
+                    <td><span class="badge-alta">Alta</span></td>
+                </tr>
+                <tr>
+                    <td>Chaleco reflectivo</td>
+                    <td>1 x trabajador</td>
+                    <td>Semestral</td>
+                    <td><span class="badge-baja">Baja</span></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- Métricas resumen — contenido destacado -->
+            <div class="metricas-calc">
+                <div class="metrica-card">
+                    <span>Total equipos</span>
+                    <strong>145</strong>
+                </div>
+                <div class="metrica-card">
+                    <span>Presupuesto est.</span>
+                    <strong>S/ 4,200</strong>
+                </div>
+                <div class="metrica-card">
+                    <span>Norma aplicable</span>
+                    <strong>ANSI Z89</strong>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ============================================================
+         VIDEO — iframe de YouTube sobre EPP
+         ============================================================ -->
+    <section class="seccion-video">
+        <h2>¿CÓMO ELEGIR TU EPP?</h2>
+        <p>Guía práctica para seleccionar los equipos correctos según tu industria</p>
+        <div class="video-wrapper">
+            <!-- VIDEO: reemplaza el src con el link de YouTube real -->
+            <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Guía de selección de EPP Safeguard Industrial"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         PASOS — Cómo funciona la calculadora
+         ============================================================ -->
+    <div class="pasos-calc">
+
+        <div class="paso-item">
+            <div class="paso-numero">1</div>
+            <p>Selecciona tu industria y número de trabajadores</p>
+        </div>
+
+        <div class="paso-item">
+            <div class="paso-numero">2</div>
+            <p>Elige el nivel de riesgo y la frecuencia de renovación</p>
+        </div>
+
+        <div class="paso-item">
+            <div class="paso-numero">3</div>
+            <p>Obtén tu lista personalizada de equipos recomendados</p>
+        </div>
+
+    </div>
+
+
+    <!-- ============================================================
+         BANNER CTA FINAL
+         ============================================================ -->
+    <div class="banner-calc">
+        <h3>¿LISTO PARA EQUIPAR A TU EQUIPO?</h3>
+        <p>Envíanos tu lista calculada y te preparamos una cotización en menos de 24 horas</p>
+        <!-- CTA — botón de acción -->
+        <button class="btn-hero" onclick="location.href='Cotizacion.html'">
+            SOLICITAR COTIZACIÓN
+        </button>
+    </div>
+
+</div>
+
+
+<!-- ============================================================
+     REDES SOCIALES — Botones con enlaces externos reales
+     ============================================================ -->
+<div class="footer-blog-rrss">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+        <img src="Multimedia/FB.png" alt="Facebook">
+    </a>
+    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+        <img src="Multimedia/X.png" alt="Twitter">
+    </a>
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <img src="Multimedia/LI.png" alt="LinkedIn">
+    </a>
+    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+        <img src="Multimedia/YT.png" alt="YouTube">
+    </a>
+</div>
+
+
+<!-- ============================================================
+     FOOTER — Pie de página
+     ============================================================ -->
+<footer class="footer">
+    <p>© 2026 – Safeguard Industrial. Todos los derechos reservados.</p>
+    <div>
+        <a href="Inicio.html">Inicio</a> &nbsp;|&nbsp;
+        <a href="Catalogo.html">Catálogo</a> &nbsp;|&nbsp;
+        <a href="BlogGuias.html">Blog</a> &nbsp;|&nbsp;
+        <a href="Cotizacion.html">Contacto</a>
+    </div>
+</footer>
+
+
+</body>
+</html>
