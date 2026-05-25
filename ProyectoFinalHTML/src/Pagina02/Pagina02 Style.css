@@ -1,0 +1,161 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url("File/Pagina_Principal-background.png") center/cover fixed;
+}
+
+/* HEADER */
+header {
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.row-1 {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(5, 1fr) 1.8fr;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 30px;
+}
+
+.row-1 h2 {
+    font-size: 11px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.row-1 h2:hover {
+    color: #a4ff00;
+}
+
+.Logo img {
+    width: 180px;
+}
+
+/* BOTONES */
+button {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-principal {
+    background: black;
+    color: white;
+    border: 2px solid #a4ff00;
+    padding: 10px 15px;
+}
+
+.btn-principal:hover {
+    background: #a4ff00;
+    color: black;
+}
+
+/* CONTENIDO */
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.row-2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.row-2 h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* GRID TARJETAS */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETA */
+.tarjeta {
+    position: relative;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+/* Overlay oscuro */
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* Texto */
+.tarjeta h3 {
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    color: white;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+/* Botón tarjeta */
+.btn-card {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    background: #a4ff00;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.btn-card:hover {
+    background: white;
+}
+
+/* Hover */
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 0 3px #a4ff00;
+}
+
+/* IMÁGENES DE FONDO */
+.bg-andamios { background: url("File/Andamios.png") center/cover; }
+.bg-cascos { background: url("File/Cascos.png") center/cover; }
+.bg-extintores { background: url("File/Fire.png") center/cover; }
+.bg-caidas { background: url("File/Caida.png") center/cover; }
+.bg-trajes { background: url("File/Trajes.png") center/cover; }
+.bg-senales { background: url("File/Señales.png") center/cover; }
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.btn-consulta {
+    background: transparent;
+    color: black;
+    border: 2px solid #a4ff00;
+    padding: 15px 50px;
+    letter-spacing: 3px;
+}
+
+.btn-consulta:hover {
+    background: #a4ff00;
+}
