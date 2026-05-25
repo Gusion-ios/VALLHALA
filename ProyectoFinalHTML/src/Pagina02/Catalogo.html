@@ -2,76 +2,149 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CATÁLOGO DE PRODUCTOS</title>
-    <link href="Pagina02%20Style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de productos de seguridad industrial - Safeguard Industrial">
+    <meta name="keywords" content="catálogo, EPP, andamios, cascos, extintores, trajes, seguridad industrial">
+    <meta name="author" content="Safeguard Industrial">
+    <title>Catálogo de Productos - Safeguard Industrial</title>
+    <!-- CSS global del proyecto -->
+    <link rel="stylesheet" href="../CSS%20General.css">
 </head>
 <body>
 
-<header>
+<!-- ============================================================
+     HEADER — Barra de navegación (igual en todas las páginas)
+     ============================================================ -->
+<header class="header">
     <div class="row-1">
+
+        <!-- LOGO -->
         <div class="Logo">
-            <img src="File/Logo01.jpeg" alt="Vallhala">
+            <img src="File/Logo01.jpeg" alt="Safeguard Industrial">
         </div>
 
-        <div><h2>QUIENES <br> SOMOS</h2></div>
-        <div><h2>PROTECCIÓN <br> CERTIFICADOS</h2></div>
-        <div><h2>SERVICIOS <br> INDUSTRIALES</h2></div>
-        <div><h2>NORMAS Y <br> LEYES</h2></div>
-        <div><h2>CONTACTANOS</h2></div>
+        <!-- MENÚ — Enlaces internos entre páginas -->
+        <div><h2><a href="Inicio.html">INICIO</a></h2></div>
+        <div><h2><a href="Catalogo.html" style="color:#a4ff00;">CATÁLOGO</a></h2></div>
+        <div><h2><a href="BlogGuias.html">BLOG</a></h2></div>
+        <div><h2><a href="Distribuidores.html">DISTRIBUIDORES</a></h2></div>
+        <div><h2><a href="Cotizacion.html">CONTACTO</a></h2></div>
 
+        <!-- BOTÓN PRINCIPAL -->
         <div class="Boton-1-1">
-            <button class="btn-principal">
+            <button class="btn-principal" onclick="location.href='Cotizacion.html'">
                 SOLICITAR ASESORÍA <br> TÉCNICA
             </button>
         </div>
+
     </div>
 </header>
 
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL — Catálogo de productos
+     ============================================================ -->
 <main class="container">
 
+    <!-- Título de la sección -->
     <div class="row-2">
         <h2>CATÁLOGO DE PRODUCTOS</h2>
     </div>
 
+    <!-- ============================================================
+         TARJETAS DE PRODUCTOS — Grid 3 columnas
+         Cada tarjeta tiene: imagen de fondo, overlay, título, botón
+         ============================================================ -->
     <section class="tarjetas">
 
-        <div class="tarjeta bg-andamios">
+        <!-- Tarjeta 1: Andamios -->
+        <div class="tarjeta bg-andamios" onclick="location.href='DetallesProduc.html'">
             <h3>ANDAMIOS INDUSTRIALES</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
-        <div class="tarjeta bg-cascos">
+        <!-- Tarjeta 2: Cascos -->
+        <div class="tarjeta bg-cascos" onclick="location.href='DetallesProduc.html'">
             <h3>CASCOS DE SEGURIDAD</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
-        <div class="tarjeta bg-extintores">
+        <!-- Tarjeta 3: Extintores -->
+        <div class="tarjeta bg-extintores" onclick="location.href='DetallesProduc.html'">
             <h3>EXTINTORES Y SUPRESIÓN</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
-        <div class="tarjeta bg-caidas">
+        <!-- Tarjeta 4: Protección contra caídas -->
+        <div class="tarjeta bg-caidas" onclick="location.href='DetallesProduc.html'">
             <h3>PROTECCIÓN CONTRA CAÍDAS</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
-        <div class="tarjeta bg-trajes">
+        <!-- Tarjeta 5: Trajes especializados -->
+        <div class="tarjeta bg-trajes" onclick="location.href='DetallesProduc.html'">
             <h3>TRAJES ESPECIALIZADOS</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
-        <div class="tarjeta bg-senales">
-            <h3>SEÑALES DE PRECAUCIÓN</h3>
+        <!-- Tarjeta 6: Señales — Badge "NUEVO" -->
+        <div class="tarjeta bg-senales" onclick="location.href='DetallesProduc.html'">
+            <span class="badge-nuevo">NUEVO</span>
+            <h3>PROTECCIÓN DE CAÍDAS</h3>
             <button class="btn-card">VER DETALLES</button>
         </div>
 
     </section>
 
+
+    <!-- ============================================================
+         VIDEO — iframe de YouTube sobre seguridad industrial
+         ============================================================ -->
+    <section class="seccion-video">
+        <h2>NUESTROS PRODUCTOS EN ACCIÓN</h2>
+        <p>Conoce cómo se aplican nuestros equipos en obra real</p>
+        <div class="video-wrapper">
+            <!-- VIDEO: iframe de YouTube — enlace externo -->
+            <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Productos de seguridad industrial Safeguard"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         CTA — Llamado a la acción
+         ============================================================ -->
     <div class="cta">
-        <button class="btn-consulta">HACER CONSULTA</button>
+        <p class="cta-label">CTA. O LLAMADOS A LA ACCIÓN</p>
+        <button class="btn-consulta" onclick="location.href='Cotizacion.html'">
+            HACER CONSULTA
+        </button>
     </div>
 
 </main>
+
+
+<!-- ============================================================
+     FOOTER — Pie de página
+     ============================================================ -->
+<footer class="footer">
+
+    <p>© 2026 – Safeguard Industrial. Todos los derechos reservados.</p>
+
+    <!-- Enlaces internos rápidos -->
+    <div>
+        <a href="Inicio.html">Inicio</a> &nbsp;|&nbsp;
+        <a href="Catalogo.html">Catálogo</a> &nbsp;|&nbsp;
+        <a href="BlogGuias.html">Blog</a> &nbsp;|&nbsp;
+        <a href="Cotizacion.html">Contacto</a>
+    </div>
+
+</footer>
+
 
 </body>
 </html>

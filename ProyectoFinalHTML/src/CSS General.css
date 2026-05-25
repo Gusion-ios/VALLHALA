@@ -1,0 +1,1194 @@
+/* ============================================================
+   PROYECTO: SAFEGUARD INDUSTRIAL
+   ARCHIVO:  CSS General.css (Página de Inicio)
+   DESCRIPCIÓN: Estilos para la página principal del sitio
+   ============================================================ */
+
+
+/* ===== RESET GENERAL ===== */
+/* Elimina márgenes y rellenos por defecto del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== BODY ===== */
+/* Fondo con patrón de circuitos electrónicos (imagen SVG o PNG) */
+body {
+    color: white;
+    background-color: #f0f0f0;
+    background-image: url("File/Circuitos.png");
+    background-repeat: repeat;
+    background-size: 400px;
+    background-attachment: fixed;
+}
+
+
+/* ============================================================
+   HEADER — Barra de navegación principal
+   Sticky: se queda fija al hacer scroll
+   ============================================================ */
+.header {
+    background: white;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Se mantiene encima de todo el contenido */
+}
+
+/* Grid del header: logo | 5 enlaces | botón */
+.row-1 {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(5, 1fr) 1.8fr;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 15px;
+}
+
+/* Textos de navegación del menú */
+.row-1 h2 {
+    font-size: 12px;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Efecto hover en los enlaces del menú */
+.row-1 h2:hover {
+    color: #a4ff00; /* Verde neón marca */
+}
+
+/* Logo del sitio */
+.Logo img {
+    width: 180px;
+    height: auto;
+    filter: contrast(1.2); /* Refuerza el contraste del logo */
+}
+
+.Logo {
+    background: transparent;
+}
+
+
+/* ============================================================
+   BOTÓN PRINCIPAL — Header (Solicitar Asesoría)
+   ============================================================ */
+.btn-principal {
+    background: black;
+    color: white;
+    border: 2px solid #a4ff00;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-principal:hover {
+    background: #a4ff00;
+    color: black;
+}
+
+
+/* ============================================================
+   HERO — Sección principal de bienvenida
+   Ocupa el 80% de la altura de la pantalla
+   ============================================================ */
+.hero {
+    height: 80vh;
+    background:
+            linear-gradient(to right, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 0.2)),
+            url("Pagina01/File/Fondo.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* Contenido de texto del hero */
+.hero-content {
+    padding-left: 6%;
+    max-width: 700px;
+}
+
+/* Título principal del hero */
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+/* ============================================================
+   BOTÓN HERO — Llamado a la acción del hero
+   ============================================================ */
+.btn-hero {
+    background: #a4ff00;
+    color: black;
+    border: none;
+    padding: 14px 35px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-hero:hover {
+    background: white;
+    transform: translateY(-3px); /* Sube levemente al pasar el mouse */
+}
+
+
+/* ============================================================
+   SECCIÓN OPCIONES — Categorías rápidas debajo del hero
+   3 columnas: Andamios | Cascos | Extintores
+   ============================================================ */
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #1e1e1e;
+}
+
+/* Cada opción individual */
+.opcion {
+    padding: 30px;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Elimina borde derecho en la última opción */
+.opcion:last-child {
+    border-right: none;
+}
+
+/* Texto de cada opción */
+.opcion h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* Icono de cada opción */
+.opcion img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    filter: brightness(0) invert(1); /* Lo hace blanco */
+    transition: filter 0.3s;
+}
+
+/* Hover: fondo verde, texto negro */
+.opcion:hover {
+    background: #a4ff00;
+    color: black;
+}
+
+.opcion:hover h3 {
+    color: black;
+}
+
+.opcion:hover img {
+    filter: none; /* Restaura el color original del ícono */
+}
+
+
+/* ============================================================
+   SECCIÓN VIDEO — Video embebido de YouTube
+   ============================================================ */
+.seccion-video {
+    background: #111;
+    padding: 50px 6%;
+    text-align: center;
+}
+
+/* Título de la sección de video */
+.seccion-video h2 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: #a4ff00;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Subtítulo del video */
+.seccion-video p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+/* Contenedor del iframe con proporción 16:9 */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 45%; /* Proporción 16:9 */
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px solid #a4ff00;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* iframe de YouTube */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ============================================================
+   REDES SOCIALES — Fila de botones circulares
+   ============================================================ */
+.row-4 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px 20px;
+    background: #1e1e1e;
+}
+
+/* Botones circulares de redes sociales */
+.row-4 button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #a4ff00;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover en botones de redes: brillo verde neón */
+.row-4 button:hover {
+    background: #a4ff00;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(164, 255, 0, 0.6);
+}
+
+/* Íconos dentro de los botones */
+.icon-social {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+/* ============================================================
+   FOOTER — Pie de página
+   ============================================================ */
+.footer {
+    background: #0a0a0a;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #a4ff00;
+}
+
+/* Texto de copyright */
+.footer p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Links del footer */
+.footer a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #a4ff00;
+}
+
+
+/* ============================================================
+   MEDIA QUERIES — Diseño responsivo
+   Se activa cuando la pantalla es menor a 768px (tablet/móvil)
+   ============================================================ */
+@media (max-width: 768px) {
+
+    /* Header en columna para pantallas pequeñas */
+    .row-1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    /* Hero más pequeño en móvil */
+    .hero {
+        height: 60vh;
+    }
+
+    /* Título más pequeño en móvil */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Opciones en una sola columna */
+    .opciones {
+        grid-template-columns: 1fr;
+    }
+
+    /* Video ocupa más espacio en móvil */
+    .video-wrapper {
+        padding-bottom: 56.25%;
+    }
+
+    /* Footer en columna */
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   PÁGINA 02 — CATÁLOGO DE PRODUCTOS
+   Agregar al final del CSS global (Pagina01Style.css)
+   ============================================================ */
+
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+/* Centra el contenido y limita el ancho máximo */
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+
+/* ===== TÍTULO DE SECCIÓN ===== */
+.row-2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.row-2 h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: black;
+    border-bottom: 3px solid #a4ff00; /* Subrayado verde neón */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+/* ===== GRID DE TARJETAS ===== */
+/* 3 columnas iguales con espacio entre ellas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* ===== TARJETA INDIVIDUAL ===== */
+/* Cada tarjeta tiene imagen de fondo y overlay oscuro */
+.tarjeta {
+    position: relative;  /* Necesario para posicionar h3 y botón encima */
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;    /* La imagen no se sale del borde redondeado */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+/* Capa oscura semitransparente encima de la imagen */
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    transition: background 0.3s;
+}
+
+/* Título de cada tarjeta — posicionado en la parte inferior */
+.tarjeta h3 {
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    color: white;
+    font-size: 1rem;
+    z-index: 2; /* Se muestra encima del overlay */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Botón "VER DETALLES" dentro de cada tarjeta */
+.btn-card {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    background: #a4ff00;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-card:hover {
+    background: white;
+}
+
+/* Hover en tarjeta: sube y agrega borde verde */
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 0 3px #a4ff00, 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover: oscurece un poco más el overlay */
+.tarjeta:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Badge "NUEVO" en esquina superior derecha */
+.badge-nuevo {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #a4ff00;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    z-index: 2;
+    transform: rotate(5deg); /* Inclinado levemente */
+}
+
+
+/* ===== IMÁGENES DE FONDO DE CADA TARJETA ===== */
+.bg-andamios  { background: url("File/Andamios.png")  center/cover; }
+.bg-cascos    { background: url("File/Cascos.png")    center/cover; }
+.bg-extintores{ background: url("File/Fire.png")      center/cover; }
+.bg-caidas    { background: url("File/Caida.png")     center/cover; }
+.bg-trajes    { background: url("File/Trajes.png")    center/cover; }
+.bg-senales   { background: url("File/Señales.png")   center/cover; }
+
+
+/* ===== CTA — Llamado a la acción al final del catálogo ===== */
+.cta {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+/* Etiqueta CTA visible encima del botón */
+.cta-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.btn-consulta {
+    background: transparent;
+    color: black;
+    border: 2px solid #a4ff00;
+    padding: 15px 50px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.btn-consulta:hover {
+    background: #a4ff00;
+    color: black;
+    transform: translateY(-2px);
+}
+
+
+/* ===== MEDIA QUERIES — Catálogo responsivo ===== */
+@media (max-width: 768px) {
+
+    /* En móvil: 1 columna */
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    /* Título más pequeño */
+    .row-2 h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* En tablet: 2 columnas */
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   PÁGINA 03 — ENLACES RÁPIDOS Y RECURSOS
+   Agregar al final del CSS global
+   ============================================================ */
+
+
+/* ===== CONTENEDOR PRINCIPAL DE ENLACES RÁPIDOS ===== */
+/* Grid de 2 filas automáticas para título y tarjetas */
+.container-enlaces {
+    display: grid;
+    width: 100%;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* ===== TÍTULO DE SECCIÓN ===== */
+.row-2-enlaces {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 10px;
+}
+
+.row-2-enlaces h2 {
+    font-size: 2.5rem;
+    color: black;
+    letter-spacing: 3px;
+    text-align: center;
+    border-bottom: 3px solid #a4ff00;
+    padding-bottom: 10px;
+}
+
+
+/* ===== GRID DE 4 TARJETAS — 2x2 ===== */
+.tarjetas-enlaces {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+
+/* ===== TARJETA BASE ===== */
+.tarjeta-enlace {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    height: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 0;
+}
+
+/* Tarjeta con fondo gris */
+.tarjeta-enlace-gris {
+    background-color: #f0f0f0;
+}
+
+/* Hover en tarjeta */
+.tarjeta-enlace:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Título dentro de cada tarjeta */
+.tarjeta-enlace h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    margin: 14px 10px 8px;
+    letter-spacing: 1px;
+}
+
+/* Botón posicionado abajo a la derecha de cada tarjeta */
+.tarjeta-enlace .btn-enlace {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #a4ff00;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta-enlace .btn-enlace:hover {
+    background: black;
+    color: #a4ff00;
+    box-shadow: 0 0 12px #a4ff00;
+}
+
+
+/* ===== TARJETA 1: CATEGORÍAS DE PRODUCTOS ===== */
+/* Grid interno 3 columnas para los íconos */
+.cat-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px 16px;
+    margin: 8px 14px;
+}
+
+.cat-productos .item-cat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cat-productos img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.cat-productos p {
+    margin: 0;
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+}
+
+
+/* ===== TARJETA 2: BLOG — imagen de fondo ===== */
+/* Imagen de fondo que ocupa el espacio disponible */
+.tarjeta-img-blog {
+    position: relative;
+    flex-grow: 1;
+    background-image: url("File/GuiasDeSeguridad.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 160px;
+}
+
+
+/* ===== TARJETA 3: FORMULARIO DE CONTACTO / INFO ===== */
+/* Lista de datos de contacto con íconos */
+.info-contacto-enlaces {
+    margin: 10px 0;
+    padding: 0 14px;
+}
+
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+}
+
+.item-contacto img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.item-contacto p {
+    margin: 0;
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/* ===== TARJETA 4: NORMAS Y CERTIFICACIONES ===== */
+/* Logos de certificaciones en fila */
+.certificaciones-enlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 8px;
+    flex-grow: 1;
+}
+
+.certificaciones-enlaces .item-cert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.certificaciones-enlaces img {
+    height: 90px;
+    object-fit: contain;
+}
+
+.certificaciones-enlaces p {
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* ===== MAPA — iframe de Google Maps al final ===== */
+.seccion-mapa {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.seccion-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(30%); /* Tonalidad sutil para combinar con el diseño */
+}
+
+
+/* ===== MEDIA QUERIES — Responsivo ===== */
+@media (max-width: 768px) {
+
+    /* En móvil: 1 columna */
+    .tarjetas-enlaces {
+        grid-template-columns: 1fr;
+    }
+
+    /* Título más pequeño */
+    .row-2-enlaces h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ============================================================
+   PÁGINA 04 — COTIZACIÓN
+   Agregar al final del CSS global
+   ============================================================ */
+
+
+/* ===== CONTENEDOR PRINCIPAL COTIZACIÓN ===== */
+.container-cotizacion {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+
+/* ===== TÍTULO DE SECCIÓN ===== */
+.titulo-cotizacion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-cotizacion h2 {
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    color: black;
+    border-bottom: 3px solid #a4ff00;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+/* ===== GRID PRINCIPAL: formulario izq | info der ===== */
+.grid-cotizacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* ===== COLUMNA FORMULARIO ===== */
+.columna-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Etiquetas de los campos */
+.columna-form label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+/* Campos del formulario */
+.columna-form input,
+.columna-form select,
+.columna-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #eaeaea;
+    font-size: 13px;
+    box-sizing: border-box;
+    color: #333;
+    transition: background 0.3s;
+}
+
+/* Foco en campos — borde verde neón */
+.columna-form input:focus,
+.columna-form select:focus,
+.columna-form textarea:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #a4ff00;
+}
+
+/* Área de texto para descripción */
+.columna-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Botón enviar — ancho completo */
+.btn-enviar {
+    background: #a4ff00;
+    color: black;
+    border: none;
+    padding: 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.btn-enviar:hover {
+    background: black;
+    color: #a4ff00;
+    transform: translateY(-2px);
+}
+
+
+/* ===== COLUMNA INFORMACIÓN DE CONTACTO ===== */
+.columna-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Caja de datos de contacto */
+.caja-contacto {
+    background: #1a1a1a;
+    color: white;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.caja-contacto h3 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #a4ff00;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+/* Cada fila de dato de contacto */
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.dato-contacto img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Íconos blancos */
+}
+
+.dato-contacto p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ===== RECURSOS DESTACADOS ===== */
+/* Sección de contenido destacado con enlaces internos */
+.recursos-destacados {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.recursos-destacados h3 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #a4ff00;
+    padding-bottom: 8px;
+}
+
+/* Lista de recursos destacados */
+.recursos-destacados ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Cada enlace interno de recurso */
+.recursos-destacados ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.recursos-destacados ul li a::before {
+    content: "→";
+    color: #a4ff00;
+    font-weight: bold;
+}
+
+.recursos-destacados ul li a:hover {
+    color: #a4ff00;
+}
+
+
+/* ===== MEDIA QUERIES — Cotización responsiva ===== */
+@media (max-width: 768px) {
+
+    /* En móvil: columna única */
+    .grid-cotizacion {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-cotizacion h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================================
+   PÁGINA 05 — BLOG Y GUÍAS DE SEGURIDAD INDUSTRIAL
+   Agregar al final del CSS global
+   ============================================================ */
+
+
+/* ===== CONTENEDOR PRINCIPAL DEL BLOG ===== */
+.container-blog {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+
+/* ===== TÍTULO DE SECCIÓN ===== */
+.titulo-blog {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-blog h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: black;
+    border-bottom: 3px solid #a4ff00;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+/* ===== GRID DE TARJETAS DEL BLOG ===== */
+/* 3 columnas iguales, 2 filas */
+.tarjetas-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+
+/* ===== TARJETA DE ARTÍCULO ===== */
+/* Imagen de fondo con overlay oscuro y texto encima */
+.tarjeta-blog {
+    position: relative;
+    height: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Overlay oscuro sobre la imagen */
+.tarjeta-blog::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+
+/* Título del artículo — esquina inferior izquierda */
+.tarjeta-blog h3 {
+    position: absolute;
+    bottom: 55px;
+    left: 16px;
+    right: 16px;
+    color: white;
+    font-size: 0.9rem;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+    line-height: 1.3;
+}
+
+/* Botón "VER DETALLES" dentro de cada tarjeta */
+.tarjeta-blog .btn-blog {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    background: #a4ff00;
+    color: black;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.tarjeta-blog .btn-blog:hover {
+    background: white;
+}
+
+/* Hover en tarjeta: sube y borde verde */
+.tarjeta-blog:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 0 3px #a4ff00, 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.tarjeta-blog:hover::before {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+/* ===== IMÁGENES DE FONDO DE CADA ARTÍCULO ===== */
+.bg-arnes     { background-image: url("File/Arnes.png"); }
+.bg-extintor  { background-image: url("File/Fire.png"); }
+.bg-casco-uso { background-image: url("File/Cascos.png"); }
+.bg-andamio2  { background-image: url("File/Andamios.png"); }
+.bg-caida2    { background-image: url("File/Caida.png"); }
+.bg-traje2    { background-image: url("File/Trajes.png"); }
+
+
+/* ===== SECCIÓN RECURSOS DESTACADOS ===== */
+/* Aparece entre las tarjetas y el CTA */
+.recursos-blog {
+    text-align: center;
+    margin: 10px 0 30px;
+}
+
+.recursos-blog p {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+/* ===== FOOTER REDES SOCIALES DEL BLOG ===== */
+/* Fila de íconos de redes con enlaces externos reales */
+.footer-blog-rrss {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 20px;
+    background: #1e1e1e;
+}
+
+.footer-blog-rrss a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #a4ff00;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.footer-blog-rrss a:hover {
+    background: #a4ff00;
+    transform: translateY(-4px);
+    box-shadow: 0 0 14px rgba(164, 255, 0, 0.6);
+}
+
+.footer-blog-rrss img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+/* ===== MEDIA QUERIES — Blog responsivo ===== */
+@media (max-width: 768px) {
+
+    /* En móvil: 1 columna */
+    .tarjetas-blog {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-blog h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* En tablet: 2 columnas */
+    .tarjetas-blog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

@@ -1,68 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>semana 4</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="Pagina05%20Style.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row-1">
-                <div class="Logo"><img src="File/Logo.png" width="200" height="100"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog y guías de seguridad industrial - Safeguard Industrial">
+    <meta name="keywords" content="blog, guías, seguridad industrial, arnés, extintores, cascos, andamios">
+    <meta name="author" content="Safeguard Industrial">
+    <title>Blog y Guías - Safeguard Industrial</title>
+    <!-- CSS global del proyecto -->
+    <link rel="stylesheet" href="../CSS%20General.css">
+</head>
+<body>
 
-                <div class="Nosotros"><h2>QUIENES <br> SOMOS</h2></div>
-                <div class="Proteccion"><h2>PROTECCIÓN <br> CERTIFICADOS</h2></div>
-                <div class="Servicios"><h2>SERVICIOS <br> INDUSTRIALES</h2></div>
-                <div class="Normas"><h2>NORMAS Y <br> LEYES</h2></div>
-                <div class="Contacto"><h2>CONTACTANOS</h2></div>
-                <div class="Boton-1-1"><button class="button1"><h3>SOLICITAR ASESORÍA <br> TÉCNICA</h3></button></div>
-            </div>
-            <h4 class="subtitul">BLOGS Y GUÍAS DE SEGURIDAD INDUSTRIAL</h4>
-            <div class="row-3">
-                <div class="card img1">
-                    <button class="button2">
-                        <h4>Mantenimiento de extintores de incendio: Una guía práctica</h4>
-                    </button>
-                </div>
-                <div class="card img2">
-                    <button class="button2">
-                        <h4>Trajes especializados para ambientes quimicos</h4>
-                    </button>
-                </div>
-                <div class="card img3">
-                    <button class="button2">
-                        <h4>Como inspreccionar un arnes de seguridad contra caidas</h4>
-                    </button>
-                </div>
-                <div class="card img4">
-                    <button class="button2">
-                        <h4>Proteccion de caidas: Sistemas de anclaje y lineas de vida</h4>
-                    </button>
-                </div>
-                <div class="card img5">
-                    <button class="button2">
-                        <h4>Andamios seguros: Montage y desmontaje sin riesgos</h4>
-                    </button>
-                </div>
-                <div class="card img6">
-                    <button class="button2">
-                        <h4>Uso correcto de cascos de seguridad en obra</h4>
-                    </button>
-                </div>
-            </div>
-            <h4 class="subtitul">RECURSOS DESTACADOS</h4>
-            <div class="container2"><button class="button3"><h5>HACER CONSULTA</h5></button></div>
-            <footer class="footer">
-                <div class="redes">
-                    <a href="#"><img src="File/FB.png" alt="Facebook"></a>
-                    <a href="#"><img src="File/IG.png" alt="Instagram"></a>
-                    <a href="#"><img src="File/WS.png" alt="WhatsApp"></a>
-                    <a href="#"><img src="File/X.png" alt="Twitter"></a>
-                    <a href="#"><img src="File/YT.png" alt="YouTube"></a>
-                    <a href="#"><img src="File/GM.webp" alt="Gmail"></a>
-                </div>
-                <p>© 2026 Vallhala Seguridad Industrial</p>
-            </footer>
+<!-- ============================================================
+     HEADER — Barra de navegación (igual en todas las páginas)
+     ============================================================ -->
+<header class="header">
+    <div class="row-1">
+
+        <!-- LOGO -->
+        <div class="Logo">
+            <img src="File/Logo01.jpeg" alt="Safeguard Industrial">
         </div>
-    </body>
+
+        <!-- MENÚ — Enlaces internos entre páginas -->
+        <div><h2><a href="Inicio.html">INICIO</a></h2></div>
+        <div><h2><a href="Catalogo.html">CATÁLOGO</a></h2></div>
+        <div><h2><a href="BlogGuias.html" style="color:#a4ff00;">BLOG</a></h2></div>
+        <div><h2><a href="Distribuidores.html">DISTRIBUIDORES</a></h2></div>
+        <div><h2><a href="Cotizacion.html">CONTACTO</a></h2></div>
+
+        <!-- BOTÓN PRINCIPAL -->
+        <div class="Boton-1-1">
+            <button class="btn-principal" onclick="location.href='Cotizacion.html'">
+                SOLICITAR ASESORÍA <br> TÉCNICA
+            </button>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- ============================================================
+     CONTENIDO PRINCIPAL — Blog y Guías
+     ============================================================ -->
+<div class="container-blog">
+
+    <!-- Título de la sección -->
+    <div class="titulo-blog">
+        <h2>BLOG Y GUÍAS DE SEGURIDAD INDUSTRIAL</h2>
+    </div>
+
+    <!-- ============================================================
+         TARJETAS DE ARTÍCULOS — Grid 3x2
+         Cada tarjeta: imagen de fondo, título, botón
+         ============================================================ -->
+    <section class="tarjetas-blog">
+
+        <!-- Artículo 1: Arnés -->
+        <!-- Imagen interna como fondo de tarjeta -->
+        <div class="tarjeta-blog bg-arnes">
+            <h3>CÓMO INSPECCIONAR UN ARNÉS DE SEGURIDAD CONTRA CAÍDAS</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+        <!-- Artículo 2: Extintores -->
+        <div class="tarjeta-blog bg-extintor">
+            <h3>MANTENIMIENTO DE EXTINTORES DE INCENDIOS: UNA GUÍA PRÁCTICA</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+        <!-- Artículo 3: Cascos -->
+        <div class="tarjeta-blog bg-casco-uso">
+            <h3>USO CORRECTO DE CASCOS DE SEGURIDAD EN OBRA</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+        <!-- Artículo 4: Andamios -->
+        <div class="tarjeta-blog bg-andamio2">
+            <h3>ANDAMIOS SEGUROS: MONTAJE Y DESMONTAJE SIN RIESGOS</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+        <!-- Artículo 5: Protección caídas -->
+        <div class="tarjeta-blog bg-caida2">
+            <h3>PROTECCIÓN DE CAÍDAS: SISTEMAS DE ANCLAJE Y LÍNEAS DE VIDA</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+        <!-- Artículo 6: Trajes -->
+        <div class="tarjeta-blog bg-traje2">
+            <h3>TRAJES ESPECIALIZADOS PARA AMBIENTES QUÍMICOS</h3>
+            <button class="btn-blog" onclick="location.href='DetallesProduc.html'">
+                VER DETALLES
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- ============================================================
+         VIDEO — iframe de YouTube sobre seguridad industrial
+         ============================================================ -->
+    <section class="seccion-video">
+        <h2>GUÍA EN VIDEO: SEGURIDAD EN OBRA</h2>
+        <p>Aprende las mejores prácticas de seguridad industrial con nuestros expertos</p>
+        <div class="video-wrapper">
+            <!-- VIDEO: iframe de YouTube — enlace externo -->
+            <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Guía de seguridad industrial Safeguard"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+
+    <!-- Recursos destacados -->
+    <div class="recursos-blog">
+        <p>Recursos Destacados</p>
+    </div>
+
+    <!-- CTA — Llamado a la acción -->
+    <div class="cta">
+        <button class="btn-consulta" onclick="location.href='Cotizacion.html'">
+            HACER CONSULTA
+        </button>
+    </div>
+
+</div>
+
+
+<!-- ============================================================
+     REDES SOCIALES — Botones con enlaces externos reales
+     ============================================================ -->
+<div class="footer-blog-rrss">
+
+    <!-- Facebook — enlace externo -->
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+        <img src="File/FB.png" alt="Facebook">
+    </a>
+
+    <!-- Twitter/X — enlace externo -->
+    <a href="https://www.twitter.com" target="_blank" title="Twitter">
+        <img src="File/X.png" alt="Twitter">
+    </a>
+
+    <!-- LinkedIn — enlace externo -->
+    <a href="https://www.linkedin.com" target="_blank" title="LinkedIn">
+        <img src="File/LI.png" alt="LinkedIn">
+    </a>
+
+    <!-- YouTube — enlace externo -->
+    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+        <img src="File/YT.png" alt="YouTube">
+    </a>
+
+</div>
+
+
+<!-- ============================================================
+     FOOTER — Pie de página
+     ============================================================ -->
+<footer class="footer">
+
+    <p>© 2026 – Safeguard Industrial. Todos los derechos reservados.</p>
+
+    <!-- Enlaces internos rápidos -->
+    <div>
+        <a href="Inicio.html">Inicio</a> &nbsp;|&nbsp;
+        <a href="Catalogo.html">Catálogo</a> &nbsp;|&nbsp;
+        <a href="BlogGuias.html">Blog</a> &nbsp;|&nbsp;
+        <a href="Cotizacion.html">Contacto</a>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
