@@ -483,6 +483,61 @@ body {
 .bg-trajes    { background: url("Catalogo/File/Trajes.png")    center/cover; }
 .bg-senales   { background: url("Catalogo/File/Señales.png")   center/cover; }
 
+/* ===== Videos ===== */
+.video-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ocultar radios */
+.video-carousel input {
+    display: none;
+}
+
+/* Contenedor de videos */
+.video-carousel .slides {
+    display: grid;
+    grid-template-columns: 100%;
+    position: relative;
+}
+
+.video-carousel video {
+    width: 100%;
+    display: none;
+    border: 2px solid #a4ff00;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Mostrar el video según el radio seleccionado */
+#video1:checked ~ .slides video:nth-child(1),
+#video2:checked ~ .slides video:nth-child(2),
+#video3:checked ~ .slides video:nth-child(3),
+#video4:checked ~ .slides video:nth-child(4) {
+    display: block;
+}
+
+/* Botones de navegación */
+.video-carousel .nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.video-carousel .nav label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.video-carousel .nav label:hover {
+    background: #a4ff00;
+}
 
 /* ===== CTA — Llamado a la acción al final del catálogo ===== */
 .cta {

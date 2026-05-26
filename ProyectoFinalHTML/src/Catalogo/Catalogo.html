@@ -98,19 +98,35 @@
 
 
     <!-- ============================================================
-         VIDEO — iframe de YouTube sobre seguridad industrial
-         ============================================================ -->
+     VIDEO — Sección de videos locales
+     ============================================================ -->
     <section class="seccion-video">
         <h2>NUESTROS PRODUCTOS EN ACCIÓN</h2>
         <p>Conoce cómo se aplican nuestros equipos en obra real</p>
-        <div class="video-wrapper">
-            <!-- VIDEO: iframe de YouTube — enlace externo -->
-            <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Productos de seguridad industrial Safeguard"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-            </iframe>
+
+        <div class="video-carousel">
+
+            <!-- Controles del carrusel -->
+            <input type="radio" name="slider" id="video1" checked>
+            <input type="radio" name="slider" id="video2">
+            <input type="radio" name="slider" id="video3">
+            <input type="radio" name="slider" id="video4">
+
+            <!-- Videos -->
+            <div class="slides">
+                <video src="File/Gafas.mp4" controls></video>
+                <video src="File/Andamios.mp4" controls></video>
+                <video src="File/Cascos.mp4" controls></video>
+                <video src="File/Trajes.mp4" controls></video>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="nav">
+                <label for="video1"></label>
+                <label for="video2"></label>
+                <label for="video3"></label>
+                <label for="video4"></label>
+            </div>
         </div>
     </section>
 
