@@ -17,14 +17,11 @@
 /* ===== BODY ===== */
 /* Fondo con patrón de circuitos electrónicos (imagen SVG o PNG) */
 body {
-    color: white;
-    background-color: #f0f0f0;
-    background-image: url("File/Circuitos.png");
-    background-repeat: repeat;
-    background-size: 400px;
+    background-image: url("File/Pagina_Principal-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
-
 
 /* ============================================================
    HEADER — Barra de navegación principal
@@ -479,12 +476,12 @@ body {
 
 
 /* ===== IMÁGENES DE FONDO DE CADA TARJETA ===== */
-.bg-andamios  { background: url("File/Andamios.png")  center/cover; }
-.bg-cascos    { background: url("File/Cascos.png")    center/cover; }
-.bg-extintores{ background: url("File/Fire.png")      center/cover; }
-.bg-caidas    { background: url("File/Caida.png")     center/cover; }
-.bg-trajes    { background: url("File/Trajes.png")    center/cover; }
-.bg-senales   { background: url("File/Señales.png")   center/cover; }
+.bg-andamios  { background: url("Catalogo/File/Andamios.png")  center/cover; }
+.bg-cascos    { background: url("Catalogo/File/Cascos.png")    center/cover; }
+.bg-extintores{ background: url("Catalogo/File/Fire.png")      center/cover; }
+.bg-caidas    { background: url("Catalogo/File/Caida.png")     center/cover; }
+.bg-trajes    { background: url("Catalogo/File/Trajes.png")    center/cover; }
+.bg-senales   { background: url("Catalogo/File/Señales.png")   center/cover; }
 
 
 /* ===== CTA — Llamado a la acción al final del catálogo ===== */
@@ -581,7 +578,7 @@ body {
 /* ===== GRID DE 4 TARJETAS — 2x2 ===== */
 .tarjetas-enlaces {
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 550px);
     gap: 20px;
     padding: 40px;
     margin: 20px auto;
@@ -599,7 +596,7 @@ body {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    height: 300px;
+    height: 380px;
     transition: transform 0.3s, box-shadow 0.3s;
     padding: 0;
 }
@@ -617,10 +614,10 @@ body {
 
 /* Título dentro de cada tarjeta */
 .tarjeta-enlace h3 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: black;
-    margin: 14px 10px 8px;
+    margin: 18px 14px 12px;
     letter-spacing: 1px;
 }
 
@@ -633,8 +630,8 @@ body {
     color: black;
     border: none;
     border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 0.75rem;
+    padding: 10px 20px;
+    font-size: 0.85rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s, box-shadow 0.3s;
@@ -663,14 +660,14 @@ body {
 }
 
 .cat-productos img {
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
     object-fit: contain;
 }
 
 .cat-productos p {
     margin: 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     text-align: left;
 }
@@ -681,7 +678,7 @@ body {
 .tarjeta-img-blog {
     position: relative;
     flex-grow: 1;
-    background-image: url("File/GuiasDeSeguridad.jpg");
+    background-image: url("EnlacesRapidos/File/GuiasDeSeguridad.jpg");
     background-size: cover;
     background-position: center;
     min-height: 160px;
@@ -736,12 +733,12 @@ body {
 }
 
 .certificaciones-enlaces img {
-    height: 90px;
+    height: 120px;
     object-fit: contain;
 }
 
 .certificaciones-enlaces p {
-    font-size: 12px;
+    font-size: 14px;
     color: #333;
     font-weight: bold;
     margin: 0;
@@ -1111,12 +1108,12 @@ body {
 
 
 /* ===== IMÁGENES DE FONDO DE CADA ARTÍCULO ===== */
-.bg-arnes     { background-image: url("File/Arnes.png"); }
-.bg-extintor  { background-image: url("File/Fire.png"); }
-.bg-casco-uso { background-image: url("File/Cascos.png"); }
-.bg-andamio2  { background-image: url("File/Andamios.png"); }
-.bg-caida2    { background-image: url("File/Caida.png"); }
-.bg-traje2    { background-image: url("File/Trajes.png"); }
+.bg-arnes     { background-image: url("BlogGuias/File/caidas.webp"); }
+.bg-extintor  { background-image: url("BlogGuias/File/extintores.jpg"); }
+.bg-casco-uso { background-image: url("BlogGuias/File/cascos.webp"); }
+.bg-andamio2  { background-image: url("BlogGuias/File/andamios.webp"); }
+.bg-caida2    { background-image: url("BlogGuias/File/cuerdas.webp"); }
+.bg-traje2    { background-image: url("BlogGuias/File/trajes.png"); }
 
 
 /* ===== SECCIÓN RECURSOS DESTACADOS ===== */
@@ -1498,7 +1495,6 @@ body {
     letter-spacing: 2px;
     color: black;
     border-bottom: 3px solid #a4ff00;
-    display: inline-block;
     padding-bottom: 8px;
     margin: 30px auto 25px;
     display: block;
@@ -1708,8 +1704,8 @@ body {
 }
 
 /* Imágenes de fondo de productos relacionados */
-.img21 { background-image: url("Multimedia/guantes.png"); }
-.img22 { background-image: url("Multimedia/gafas.png"); }
+.img21 { background-image: url("DetalleProducto/File/guantes.webp"); }
+.img22 { background-image: url("DetalleProducto/File/gafas.jpg"); }
 
 
 /* ===== FOOTER CON REDES SOCIALES ===== */
